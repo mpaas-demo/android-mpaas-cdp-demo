@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.alipay.portal'
+apply plugin: 'android-apt'
+apply plugin: 'com.alipay.apollo.baseline.update'
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        applicationId "com.mpaas.demo"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    signingConfigs {
+        release {
+            keyAlias 'mpaas123'
+            keyPassword 'mpaas123'
+            storeFile file('mpaas_keystore.jks')
+            storePassword 'mpaas123'
+        }
+        debug {
+            keyAlias 'mpaas123'
+            keyPassword 'mpaas123'
+            storeFile file('mpaas_keystore.jks')
+            storePassword 'mpaas123'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile project(":api")
+    bundle 'com.alipay.android.phone.wallet:nebulauc-build:1.6.0.200305192821@jar'
+    provided 'com.alipay.android.phone.mobilesdk:quinox-build:2.6.2.190909193910:multidex@jar'
+    provided 'com.alipay.android.phone.mobilesdk:framework-build:2.6.2.190911162206:api@jar'
+    provided 'com.alipay.android.phone.mobilesdk:commonservice-build:1.9.0.190617145454:api@jar'
+    provided 'com.alipay.android.phone.mobilesdk:rpc-build:1.8.5.191206152900:api@jar'
+    bundle "com.alipay.android.phone.thirdparty:fastjson-build:1.1.70.190213120120@jar"
+    // bundle 'com.mpaas.diagnose:diagnose-build:2.0.0.200210181412@jar'
+    // bundle 'com.mpaas.diagnose.ui:diagnoseui-build:1.0.0.200110143141@jar'
+    // bundle 'com.mpaas.diagnose.context:diagnosecontext-build:1.0.0.200110143141@jar'
+    // bundle 'com.mpaas.health.cases:healthcases-build:1.0.0.200210205513@jar'
+    // provided 'com.mpaas.diagnose:diagnose-build:2.0.0.200110143141:api@jar'
+    provided 'com.alipay.android.phone.wallet:nebula-build:1.6.2.190806155316:api@jar'
+
+}
+
+apply plugin: 'com.alipay.apollo.baseline.update'
+mpaascomponents {
+// when you want exclude mpaas dependencies ,you can add dependency ga to to excludeDependencies
+// or set removed = true in mpaaspakcages.json
+    excludeDependencies = []
+}

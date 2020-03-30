@@ -1,0 +1,43 @@
+apply plugin: 'maven'
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/google/'
+            name 'aliyun-google'
+        }
+         maven {
+            credentials {
+                username "请提交工单获取"
+                password "请提交工单获取"
+            }
+            url "http://mvn.cloud.alipay.com/nexus/content/repositories/releases/"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.android.boost.easyconfig:easyconfig:2.3.3'
+    }
+}
+allprojects {
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/google/'
+            name 'aliyun-google'
+        }
+
+         maven {
+            credentials {
+                username "请提交工单获取"
+                password "请提交工单获取"
+            }
+            url "http://mvn.cloud.alipay.com/nexus/content/repositories/releases/"
+        }
+    }
+}

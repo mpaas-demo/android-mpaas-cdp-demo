@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metainfo>
+    <application>
+        <className>com.mpaas.demo.cdp.CdpMicroApp</className>
+        <appId>33340000</appId>
+    </application>
+</metainfo>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="20">
+
+    <Button
+        android:id="@+id/btn_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_bright"
+        android:text="MultiStyle" />
+
+    <Button
+        android:id="@+id/btn_locaiton"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_bright"
+        android:text="Location" />
+
+    <Button
+        android:id="@+id/btn_h5"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_bright"
+        android:text="h5" />
+
+    <Button
+        android:id="@+id/btn_test"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_bright"
+        android:text="test" />
+
+    <Button
+        android:id="@+id/btn_feature"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_bright"
+        android:text="feature" />
+
+    <Button
+        android:id="@+id/btn_case"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_bright"
+        android:text="case" />
+
+</LinearLayout>

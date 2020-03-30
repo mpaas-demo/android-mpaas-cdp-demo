@@ -1,0 +1,2 @@
+include ':api', ':cdp-build'
+project(':cdp-build').projectDir = new File('cdp')
