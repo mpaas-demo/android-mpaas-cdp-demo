@@ -6,7 +6,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
-import com.alipay.mobile.antui.basic.AUTextView;
 import com.alipay.mobile.framework.LauncherApplicationAgent;
 import com.alipay.mobile.framework.app.ui.BaseActivity;
 import com.mpaas.cdp.CdpAdvertisementService;
@@ -24,7 +23,7 @@ public class PitActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pit);
+        setContentView(R.layout.mcdp_demo_activity_pit);
         mCdpView = (CdpAdvertisementView) findViewById(R.id.pit_cdp_cav);
         mCdpView.setOnClickListener(new View.OnClickListener() {
             @Override

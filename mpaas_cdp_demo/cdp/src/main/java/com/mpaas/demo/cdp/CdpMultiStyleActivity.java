@@ -26,7 +26,7 @@ public class CdpMultiStyleActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_multi_style);
+        setContentView(R.layout.mcdp_demo_activity_multi_style);
         ((AUTitleBar) findViewById(R.id.title_atb)).setTitleText(getString(R.string.multi_style));
         findViewById(R.id.multi_style_rotation_btn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,47 +78,49 @@ public class CdpMultiStyleActivity extends BaseActivity {
                 startH5();
             }
         });
-
-
-        findViewById(R.id.multi_style_announcement_best_practice).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.multi_style_lottie).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickAnnouncementBestPractice();
+                onClickLottie();
             }
         });
-        findViewById(R.id.multi_style_banner_best_practice).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.multi_style_gif).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickBannerBestPractice();
+                onClickGif();
             }
         });
-
-        findViewById(R.id.multi_style_single_best_practice).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.multi_style_float_con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickSingleBestPractice();
+                onClickFloatIcon();
+            }
+        });
+        findViewById(R.id.multi_style_space_words).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickSpaceWords();
             }
         });
     }
 
-    private void onClickSingleBestPractice() {
-        Intent intent = new Intent();
-        intent.setClass(getBaseContext(), SinglelineFullLocationActivity.class);
-        startActivity(intent);
+    private void onClickSpaceWords() {
+
 
     }
 
-    private void onClickBannerBestPractice() {
-        Intent intent = new Intent();
-        intent.setClass(getBaseContext(), BannerFullLocationActivity.class);
-        startActivity(intent);
+    private void onClickFloatIcon() {
+//        MCdpFloatIconViewActivity.startFloatIconActivity(this);
+    }
+
+    private void onClickGif() {
+        GifActivity.startGifActivity(this);
 
     }
 
-    private void onClickAnnouncementBestPractice() {
-        Intent intent = new Intent();
-        intent.setClass(getBaseContext(), AnnouncementFullLocationActivity.class);
-        startActivity(intent);
+    private void onClickLottie() {
+        LottieActivity.startLottieActivity(this);
+
     }
 
     private void startH5() {

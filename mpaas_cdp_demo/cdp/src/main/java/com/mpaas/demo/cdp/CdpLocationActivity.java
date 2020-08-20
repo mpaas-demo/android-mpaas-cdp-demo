@@ -21,7 +21,7 @@ public class CdpLocationActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_location);
+        setContentView(R.layout.mcdp_demo_activity_location);
         ((AUTitleBar) findViewById(R.id.title_atb)).setTitleText(getString(R.string.location));
         findViewById(R.id.location_top_btn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +64,13 @@ public class CdpLocationActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(CdpLocationActivity.this, LocationFullScreenActivity.class));
+            }
+        });
+
+        findViewById(R.id.location_float_icon).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CdpLocationActivity.this, DynamicFloatIconActivity.class));
             }
         });
     }

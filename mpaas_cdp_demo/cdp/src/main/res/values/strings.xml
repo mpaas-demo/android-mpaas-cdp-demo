@@ -12,6 +12,7 @@
     <string name="h5_popup">H5弹屏广告</string>
     <string name="h5_popup_native">H5Native弹屏广告</string>
 
+    <string name="lottie_ad">Lottie广告</string>
 
     <string name="location">展位位置</string>
     <string name="top">顶部</string>
@@ -43,9 +44,16 @@
     <string name="feature_new_activity_adcode">新建活动占位码是 feature_space_new_adcode</string>
     <string name="feature_add_feature_adcode">活动上下线占位码是 feature_space_add_adcode</string>
 
+    <string name="feature_activity_refresh">刷新接口测试</string>
+
     <string name="show_user_id">当前用户ID如下(人群管理使用):</string>
     <string name="cdp_test_ui_view">UI样式测试</string>
     <string name="cdp_test_case_view">测试用例</string>
+
+
+    <string name="mcdp_float_icon">浮标</string>
+    <string name="mcdp_demo_style_float_icon">浮标</string>
+    <string name="mcdp_demo_style_gif">gif</string>
 
 
 </resources>

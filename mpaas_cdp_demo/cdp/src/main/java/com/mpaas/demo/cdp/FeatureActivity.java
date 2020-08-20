@@ -23,7 +23,7 @@ public class FeatureActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feature);
+        setContentView(R.layout.mcdp_demo_activity_feature);
         initView(this);
     }
 
@@ -33,6 +33,7 @@ public class FeatureActivity extends BaseActivity implements View.OnClickListene
         findViewById(R.id.mock_bank_feature_show).setOnClickListener(this);
         findViewById(R.id.mock_bank_feature_show2).setOnClickListener(this);
         ((AUTextView)findViewById(R.id.v_show_id)).setText(LoggerFactory.getLogContext().getUserId());
+        findViewById(R.id.feature_refresh_code).setOnClickListener(this);
     }
 
     @Override
@@ -57,8 +58,15 @@ public class FeatureActivity extends BaseActivity implements View.OnClickListene
             onClickmock_bank_feature_show2();
             return;
         }
+        if (R.id.feature_refresh_code==id){
+            onClickFeature_refresh_code();
+            return;
+        }
 
+    }
 
+    private void onClickFeature_refresh_code() {
+        CdpTestRefreshActivity.start(this);
 
     }
 

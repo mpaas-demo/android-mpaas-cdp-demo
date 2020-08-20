@@ -6,7 +6,6 @@ import android.support.multidex.MultiDex;
 
 import com.alipay.mobile.framework.quinoxless.IInitCallback;
 import com.alipay.mobile.framework.quinoxless.QuinoxlessFramework;
-// import com.mpaas.diagnose.DiagnoseService;
 
 
 public class MyApplication extends Application {
@@ -26,6 +25,5 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         QuinoxlessFramework.init();
-        // DiagnoseService.createInstance(getApplicationContext());
     }
 }

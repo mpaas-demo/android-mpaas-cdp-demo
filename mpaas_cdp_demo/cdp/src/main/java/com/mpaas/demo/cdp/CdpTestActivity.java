@@ -22,15 +22,26 @@ public class CdpTestActivity extends BaseActivity {
 
     public static void startActivity(Context baseContext) {
         Intent intent = new Intent();
-        intent.setClass(baseContext,CdpTestActivity.class);
+        intent.setClass(baseContext, CdpTestActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         baseContext.startActivity(intent);
+    }
+
+    public static void onClickCase(Context applicationContext) {
+        try {
+            Class healthActivity = Class.forName("com.mpaas.diagnose.ui.HealthBizSelectActivity");
+            Intent intent = new Intent(applicationContext, healthActivity);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            applicationContext.startActivity(intent);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
+        setContentView(R.layout.mcdp_demo_activity_test);
         ((AUTitleBar) findViewById(R.id.title_atb)).setTitleText(getString(R.string.cdp_test));
         mAPSharedPreferences = SharedPreferencesManager.getInstance(this, GROUP_ID);
         findViewById(R.id.test_custom_space_code).setOnClickListener(new View.OnClickListener() {
@@ -106,22 +117,20 @@ public class CdpTestActivity extends BaseActivity {
                 onCdpTestUiViewClick(v);
             }
         });
-        findViewById(R.id.cdp_test_case_view).setOnClickListener(new View.OnClickListener() {
+
+        findViewById(R.id.cdp_test_android_h5).setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                onClickCase(getApplicationContext());
+                onClickcdp_test_android_h5();
             }
         });
+
+
     }
-    public static void onClickCase(Context applicationContext) {
-        try {
-            Class healthActivity = Class.forName("com.mpaas.diagnose.ui.HealthBizSelectActivity");
-            Intent intent = new Intent(applicationContext, healthActivity);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            applicationContext.startActivity(intent);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+
+    private void onClickcdp_test_android_h5() {
+        H5AppZoneActivity.start(getApplication());
 
     }
 

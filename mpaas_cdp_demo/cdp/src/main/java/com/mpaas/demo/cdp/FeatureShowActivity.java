@@ -28,7 +28,7 @@ public class FeatureShowActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feature_show);
+        setContentView(R.layout.mcdp_demo_activity_feature_show);
         ((AUTitleBar) findViewById(R.id.title_atb)).setTitleText("模拟展示页面-单帧");
         pit_cdp_cav_bottom = (CdpAdvertisementView) findViewById(R.id.pit_cdp_cav_bottom);
         pit_cdp_cav_top = (CdpAdvertisementView) findViewById(R.id.pit_cdp_cav_top);

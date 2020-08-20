@@ -26,7 +26,7 @@ public class FeatureNewActivityActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feature_new);
+        setContentView(R.layout.mcdp_demo_activity_feature_new);
         mCdpView = (CdpAdvertisementView) findViewById(R.id.pit_cdp_cav);
         mCdpView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -17,7 +17,7 @@ public class DynamicActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dynamic);
+        setContentView(R.layout.mcdp_demo_activity_dynamic);
         Toast.makeText(this, getClass().getName(), Toast.LENGTH_LONG).show();
     }
 
